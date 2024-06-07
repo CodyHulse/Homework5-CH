@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.nav {
+    background-color: #484a47;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding-right: 1rem;
+    position: relative;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav li.active {
+    text-decoration: underline;
+    text-decoration-color: #c751ff;
+    text-decoration-thickness: 0.15rem;
+}
+
+.companyImage {
+    height: auto;
+}
+
+.freeImage {
+    height: auto;
+    align-items: right;
+}
+
+.bodyInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 1rem;
+}
+
+.bodyText {
+    flex: 1;
+}
+
+.projectInfo {
+    text-align: left; 
+    margin-top: 2rem; 
+}
+
+.currentProjects {
+    margin-bottom: 0.5rem; 
+}
+
+.underline {
+    border: none;
+    height: 2px;
+    background-color: #bdb6b6; 
+    width: 100%; 
+    margin-bottom: 1rem; 
+}
+
+.projectImages {
+    justify-content: center; 
+    gap: 1rem; 
+}
+
+.projectImage {
+    height: auto; 
+    margin: 1rem; 
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .nav a {
+        font-size: 39px;
+    }
+
+    .hamburgerMenu {
+        display: none;
+    }
+
+    .companyImage {
+        width: 300px;
+    }
+
+    .projectImage {
+        width: 350px; 
+    }
+
+    .freeImage {
+        width: 600px;
+    }
+
+    .header {
+        font-size: 60px;
+    }
+
+    .textDump {
+        font-size: 33px;
+    }
+
+    .currentProjects {
+        font-size: 48px;
+    }
+}
+
+/* Laptop */
+@media (max-width: 1199px) and (min-width: 800px) {
+    .nav a {
+        font-size: 21px;
+    }
+
+    .hamburgerMenu {
+        display: none;
+    }
+
+    .companyImage {
+        width: 200px;
+    }
+
+    .projectImage {
+        width: 225px; 
+    }
+
+    .freeImage {
+        width: 400px;
+    }
+
+    .header {
+        font-size: 40px;
+    }
+
+    .textDump {
+        font-size: 22px;
+    }
+
+    .currentProjects {
+        font-size: 33px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+
+    .menuItems {
+        display: flex;
+        gap: 3rem;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .menuItems.open {
+        transform: translateX(0);
+    }
+
+    .nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 52px; 
+        right: 0;
+        background-color: #484a47;
+        width: 200px; 
+        height: 700px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav ul li {
+        margin: 1rem; 
+        margin-bottom: 0rem;
+    }
+
+    .nav a {
+        font-size: 20px;
+    }
+
+    .nav .hamburgerMenu {
+        display: block;
+    }
+
+    .companyImage {
+        width: 100px;
+    }
+
+    .bodyInfo {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .freeImage {
+        width: 370px;
+        order: -1;
+    }
+
+    .header {
+        font-size: 22px;
+    }
+
+    .textDump {
+        font-size: 12px;
+    }
+
+    .projectImage {
+        width: 150px; 
+    }
+
+    .currentProjects {
+        font-size: 20px;
+    }
+}
